@@ -1,0 +1,71 @@
+<head>
+  <link href="style-min.css" type="text/css" rel="stylesheet" media="screen,tv,print" />
+  <link href="iframe.css" type="text/css" rel="stylesheet" media="screen,tv,print" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap">
+  <script type="text/javascript" src="code.js"></script>
+  <script type="text/javascript" src="iframe-image.js"></script>
+  <style>
+    .pict {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .pict.hide {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="pictp">
+        <img id="img" class="pict" src="img/nogizaka.jpg">
+      </td>
+      <td class="blog" rowspan="2">
+        <iframe id="demo" src="" frameborder="0"></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td class="navigation scrollbox">
+        <div class="navyear ">Airing</div>
+        <button class="navvariety" onclick="changeImage('img/nogizakakoujichuu.jpg'); document.getElementById('demo').src = 'https://script.google.com/macros/s/AKfycbzq8ypCzmnG0fUCJtz5NXyb3ln2CBOMrM4FrnbvBsTuT8jChUQA48CGhl7fUMoB5n1i/exec'">Nogizaka Under Construction</button>
+        <button class="navvariety" onclick="changeImage('img/nogizakadokoe.jpg'); document.getElementById('demo').src = 'https://script.google.com/macros/s/AKfycbyTEeRtGh3IeporOMujTSJLkV4oFaUzPG9iA-nOGb8WmZVHVqW08JldZsy-_yLe4n8H/exec'">Nogizaka Doko e</button>
+        <button class="navvariety" onclick="changeImage('img/nogizakaotameshichuu.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Otameshichuu</button>
+		<br/>
+		<div class="navyear ">Completed</div>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka tte Doko?</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S1</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S2</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S3</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S4</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S5</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S6</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S7</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S8</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S9</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogibingo! S10</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Skits S1</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Skits S2</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Star Tanjou S1</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Star Tanjou S2</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Shin-Nogizaka Star Tanjou</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka46 Yamazaki Rena to Ohatsu-chan</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka46 Yumiki Nao to Yamitsuki-chan</button>
+		<button class="navvariety" onclick="changeImage('img/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogi Eigo</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function changeImage(imageName) {
+      const img = document.getElementById('img');
+      img.classList.add('hide');
+      setTimeout(() => {
+        img.src = imageName;
+        img.classList.remove('hide');
+      }, 500);
+    }
+  </script>
+</body>
