@@ -134,14 +134,14 @@ transition: width 1s ease;
 
 @import "compass/css3";
 
-.navyear {
+.navcategory {
 font-size:40pt;
 font-weight:900;
 text-align:center;
 }
 
-.navvariety {
-    background: #e3e3e3;
+.navbutton {
+    background: MediumOrchid;
     color: #540054;
     width: 95%;
     padding: 6pt;
@@ -155,11 +155,29 @@ text-align:center;
     text-align: left;
 }
 
-.navvariety:hover{background-color:MediumOrchid; color: white; transition: background-color .5s ease; }
-.navvariety:focus{background-color:Indigo; color: white; font-weight:900; transition: background-color .5s ease; }
+.navbutton:hover{background-color:#e3e3e3; color: white; transition: background-color .5s ease; }
+.navbutton:focus{background-color:Indigo; color: white; font-weight:900; transition: background-color .5s ease; }
+
+.navx {
+    background: #e8e8e8;
+    color: #4e4e4e;
+    width: 95%;
+    padding: 6pt;
+    border: 0;
+    border-radius: 5pt;
+    margin: auto;
+    margin-top: 6px;
+    transition: width .5s ease;
+    transition: background-color .5s ease;
+    display: block;
+    text-align: left;
+}
+
+.navx:hover{background-color:#a6a6a6; color: #4e4e4e; transition: background-color .5s ease; }
+.navx:focus{background-color:#616161; color: white; font-weight:900; transition: background-color .5s ease; }
 
 @media only screen and (max-width: 700px) {
-	.navvariety {width: 100%; transition: width .5s ease;} 
+	.navbutton {width: 100%; transition: width .5s ease;} 
 	}
 
 table {
@@ -187,7 +205,7 @@ border: 0pt solid black;
 /* ---  ---*/
 
 
-.navyear {
+.navcategory {
 color: #540054;
 font-size:20pt;
 font-weight:900;
