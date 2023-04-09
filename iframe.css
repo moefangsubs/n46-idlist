@@ -141,8 +141,8 @@ text-align:center;
 }
 
 .navbutton {
-    background: MediumOrchid;
-    color: #540054;
+    background: Indigo;
+    color: white;
     width: 95%;
     padding: 6pt;
     border: 0;
@@ -155,8 +155,8 @@ text-align:center;
     text-align: left;
 }
 
-.navbutton:hover{background-color:#e3e3e3; color: white; transition: background-color .5s ease; }
-.navbutton:focus{background-color:Indigo; color: white; font-weight:900; transition: background-color .5s ease; }
+.navbutton:hover{background-color:#e3e3e3; color: #540054; transition: background-color .5s ease; }
+.navbutton:focus{background-color:MediumOrchid; color: white; font-weight:900; transition: background-color .5s ease; }
 
 .navx {
     background: #e8e8e8;
