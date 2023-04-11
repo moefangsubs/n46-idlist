@@ -1,0 +1,71 @@
+<head>
+  <link href="style-min.css" type="text/css" rel="stylesheet" media="screen,tv,print" />
+  <link href="iframe.css" type="text/css" rel="stylesheet" media="screen,tv,print" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,500;1,700&display=swap">
+  <script type="text/javascript" src="code.js"></script>
+  <script type="text/javascript" src="iframe-image.js"></script>
+  <style>
+    .pict {
+      opacity: 1;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    .pict.hide {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td class="pictp">
+        <img id="img" class="pict" src="img/nogizaka.jpg">
+      </td>
+      <td class="blog" rowspan="2">
+        <iframe id="demo" src="" frameborder="0"></iframe>
+      </td>
+    </tr>
+    <tr>
+      <td class="navigation scrollbox">
+		<div class="navcategory ">Airing</div>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Koshodo Monogatari</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Actress</button>
+		<br/>
+		<div class="navcategory ">Completed</div>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Hatsumori Bemars</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Nogizaka Cinemas - Story of 46</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Zambi</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Eizouken ni ea Te o Dasuna!</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Saru ni Au</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Samu no Koto</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Denei Shoujo : Video Girl AI 2018</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Denei Shoujo : Video Girl Mai 2019</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Unsung Cinderella: Another Story</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Kuroshinri Kanojo ga Oshieru Kindan no Shinrijutsu</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Moshimo, Ikemen Dake no Koukou ga Attara</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Borderless</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Toritateya - Honeys</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Love Sharing</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Saisho wa Paa!</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Shinsou Wa Mimi no Naka</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Kikazaranai Koi ni wa Riyuu ga Atte</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Ryosangata Riko: Puramo Joshi no Jinsei Kumitate Ki</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Janaihou no Kanojo</button>
+		<button class="navx" onclick="changeImage('https://ik.imagekit.io/moephotos/n46-idlist/nogizaka.jpg'); document.getElementById('demo').src = 'not.html'">Yareta Kamo Iinkai</button>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function changeImage(imageName) {
+      const img = document.getElementById('img');
+      img.classList.add('hide');
+      setTimeout(() => {
+        img.src = imageName;
+        img.classList.remove('hide');
+      }, 200);
+    }
+  </script>
+</body>
