@@ -47,29 +47,31 @@
 </style>
 <body>
 <?php
-  $clientIP  = $_SERVER['REMOTE_ADDR']; 
-  $ipinfoDB   = file_get_contents("http://ipinfo.io/{$clientIP}"); 
-  $IPdetails = json_decode($ipinfoDB); 
-  $blockedCountries = array(
+ <?php
+function getCountryFromIP($ip) {
+    $json = file_get_contents("https://api.ipgeolocation.io/ipgeo?apiKey=b925ab06d6bb46458dc675bd5be0372d&ip=" . $ip);
+    $data = json_decode($json, true);
+    return $data['country_code2'];
+}
 
-    'JP', # Japan
-    'KR', # Korea
-    'CN', # China
-    'US'  # United States 
-  );
+function blockCountry($countries) {
+    $visitorIP = $_SERVER['REMOTE_ADDR'];
+    $countryCode = getCountryFromIP($visitorIP);
 
-  $allowedIPS       = array(
-      '0.0.0.1', # YOUR IP 
-      '0.0.0.2' # Your client IP 
-  );
+    if (in_array($countryCode, $countries)) {
+        // Mengarahkan pengunjung ke Google.com
+        header("Location: http://www.google.com");
+        exit();
+    }
+}
 
-  $clientCountry    = $details->country;
-  if(in_array($clientCountry, $blockedCountries)){
-      if(!in_array($clientIP, $allowedIPS)){
-          header("Location: http://php.net/");
-          exit();
-      }
-  }
+// Daftar kode negara yang akan diblokir
+$blockedCountries = array('JP', 'KR', 'CN');
+
+// Memeriksa apakah pengunjung berasal dari negara yang diblokir
+blockCountry($blockedCountries);
+?>
+
     ?>
 <div class="head">
 Nogizaka46 Indonesia Fansub Masterlist
