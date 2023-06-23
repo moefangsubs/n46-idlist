@@ -47,7 +47,6 @@
 </style>
 <body>
 <?php
- <?php
 function getCountryFromIP($ip) {
     $json = file_get_contents("https://api.ipgeolocation.io/ipgeo?apiKey=b925ab06d6bb46458dc675bd5be0372d&ip=" . $ip);
     $data = json_decode($json, true);
@@ -71,8 +70,6 @@ $blockedCountries = array('JP', 'KR', 'CN');
 // Memeriksa apakah pengunjung berasal dari negara yang diblokir
 blockCountry($blockedCountries);
 ?>
-
-    ?>
 <div class="head">
 Nogizaka46 Indonesia Fansub Masterlist
 </div>
