@@ -47,43 +47,29 @@
 </style>
 <body>
 <?php
-    # GET the visitor IP
-    $clientIP  = $_SERVER['REMOTE_ADDR']; 
+  $clientIP  = $_SERVER['REMOTE_ADDR']; 
+  $ipinfoDB   = file_get_contents("http://ipinfo.io/{$clientIP}"); 
+  $IPdetails = json_decode($ipinfoDB); 
+  $blockedCountries = array(
 
-    # Send request to IP INFO DB & GET details
-    $ipinfoDB   = file_get_contents("http://ipinfo.io/{$clientIP}"); 
-
-    # Decode the JSON data
-    $IPdetails = json_decode($ipinfoDB); 
-
-# Blocked countries code e.g:
-$blockedCountries = array(
     'JP', # Japan
     'KR', # Korea
     'CN', # China
     'US'  # United States 
-);
-    # Allowed IPs - White list yours or any other IP e.g:
-    $allowedIPS       = array(
-        '0.0.0.1', # YOUR IP 
-        '0.0.0.2' # Your client IP 
-    );
+  );
 
-    # GET the country code from the IP INFO Database e.g: MA - (Morocco)
-    $clientCountry    = $details->country;
+  $allowedIPS       = array(
+      '0.0.0.1', # YOUR IP 
+      '0.0.0.2' # Your client IP 
+  );
 
-    # Check if visitor country is blocked
-    if(in_array($clientCountry, $blockedCountries)){
-
-        # If the visitor country is blocked => Check If its IP is in white list
-        if(!in_array($clientIP, $allowedIPS)){
-
-            # If country is blocked and IP not allowed => Then redirect
-            header("Location: http://google.com/");
-            exit();
-
-        }
-    }
+  $clientCountry    = $details->country;
+  if(in_array($clientCountry, $blockedCountries)){
+      if(!in_array($clientIP, $allowedIPS)){
+          header("Location: http://php.net/");
+          exit();
+      }
+  }
     ?>
 <div class="head">
 Nogizaka46 Indonesia Fansub Masterlist
